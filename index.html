@@ -15,7 +15,7 @@
     version="1.1"
     xlmns="http://w3/org/200/svg">
        <path d="
-            M0 77
+            M0 67
             C   273, 183
                 822, -40
                 1920, 106
@@ -24,59 +24,56 @@
             V 67
             Z">
             <animate
-                repeat-count="indefinite"
-                from="1" to="0"
-                attributeName="d"
-                dur="30s"
-                attributesType="XML"
-                values="
-                    M0  77
-                    C   473,283
-                        822, -40
-                        1920, 116
-                    V 600
-                    H 0
-                    V 300
-                    Z;
-                    
-                    M0  77
-                    C   473,-40
-                        1222, 283
-                        1920, 136
-                    V 600
-                    H 0
-                    V 300
-                    Z;
-                    
-                    M0  77
-                    C   973,260
-                        1722, -53
-                        1920, 120
-                    V 600
-                    H 0
-                    V 300
-                    Z;
-                    
-                    M0  77
-                    C   473,283
-                        822, -40
-                        1920, 116
-                    V 600
-                    H 0
-                    V 67
-                    Z; 
-                    ">
-                </animate>
+            repeatCount="indefinite"
+            attributeName="d"
+            dur="30s"
+            attributeType="XML"
+            values="
+                M0 77
+                C 473, 283
+                  822, -40
+                  1920, 116
+                  V 600
+                  H 0
+                  V 300
+                  Z;
+                  M0 77
+                  C 473, -40
+                  1222, 283
+                  1920, 136
+                  V 600
+                  H 0
+                  V 300
+                  Z;
+                  M0 77
+                  C 973, 260
+                  1722, -53
+                  1920, 120
+                  V 600
+                  H 0
+                  V 300
+                  Z;
+                  M0 77
+                  C 473, 283
+                  822, -40
+                  1920, 116
+                  V 600
+                  H 0
+                  V 300
+                  Z">
+    </animate>
         </path>
     </svg>
 
 
     <header>
         <ul>
-            <a href="./index.html"><li>Home</li></a>
-            <a href="./src/pages/project.html"><li>Project</li></a>
-            <a href="./src/pages/stack.html"><li>Stack</li></a>
-            <a href="./src/pages/contact.html"><li>Contact</li></a>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./src/pages/project.html">Project</a></li>
+            <li><a href="./src/pages/stack.html">Stack></a></li>
+            <li><a href="./src/pages/contact.html">Contact</a></li>
         </ul>
     </header>
 
@@ -99,8 +96,12 @@
                 </a>
             </div>
         </div>
-        <h2>Julien Levieux, Javascript Developer</h2>
-        <div class=options>
+        <h2 id="demo"></h2>
+        
+    </section>
+
+    <footer>
+<div class=options>
             <a href="./src/pages/project.html">
                 <h3>Project</h3>
             </a>
@@ -111,10 +112,6 @@
                 <h3>Contact</h3>
             </a>
         </div>
-    </section>
-
-    <footer>
-
         <ul class="footer__links">
             <a href="https://twitter.com">
                 <li class="footer__link">Twitter</li>
@@ -127,5 +124,20 @@
             </a>
         </ul>
     </footer>
+
+    <script>
+        var i = 0;
+        var txt = 'Julien Levieux, Javascript Developer.';
+        var speed = 120;
+        
+        const typeWriter = () => {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+        </script>
 </body>
 </html> 
